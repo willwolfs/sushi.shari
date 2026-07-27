@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F8F9FA;
+  color: #101828;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* 📱 SISTEMA NATIVO RESPONSIVE (CON MENÚ LATERAL IZQUIERDO Y DRAWER) */
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Scrollbars Elegantes */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+/* 📱 TABLETS Y SMARTPHONES (Hasta 1024px) */
+@media (max-width: 1024px) {
+  .app-container {
+    flex-direction: column !important;
+  }
+
+  .content-container {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    padding-bottom: 2rem !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Header Superior Móvil */
+  header.desktop-header {
+    padding: 0.75rem 1rem !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 120 !important;
+  }
+
+  /* Grilla del Dashboard en Móvil */
+  div[style*="gridTemplateColumns: 'repeat(4, 1fr)'"],
+  div[style*="gridTemplateColumns: '1.8fr 1fr'"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Vista POS Venta Adaptable */
+  div[style*="alignItems: 'flex-start'"][style*="fontFamily"] {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  main.content-area {
+    width: 100% !important;
+  }
+
+  aside[style*="width: '450px'"],
+  aside[style*="width: '440px'"],
+  aside[style*="width: '480px'"] {
+    width: 100% !important;
+    position: static !important;
+    margin-top: 1rem !important;
+  }
+}
+
+/* 📲 SMARTPHONES PEQUEÑOS (Hasta 640px) */
+@media (max-width: 640px) {
+  /* Grilla de productos a 2 columnas limpias */
+  div[style*="gridTemplateColumns: 'repeat(auto-fill, minmax(210px, 1fr))'"],
+  div[style*="gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))'"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Ajustar modales */
+  div[style*="position: 'fixed'"] > div[style*="borderRadius"] {
+    width: 94vw !important;
+    max-width: 94vw !important;
+    padding: 1rem !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+}

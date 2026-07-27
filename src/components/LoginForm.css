@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ════════════════════════════════════════════════════════════
+   SHARI SUSHI — PRODUCTION LOGIN DESIGN
+   Minimalist Midnight Navy Card with Nude/Peach Canvas
+   Sin scroll interno en la tarjeta - Scroll externo en la página
+════════════════════════════════════════════════════════════ */
+
+.nl-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F8DACD 0%, #ECC7B6 100%);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  padding: 2.5rem 1rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Central Login Card (Sin Scroll Interno) */
+.nl-card {
+  width: 100%;
+  max-width: 390px;
+  background: #090C25;
+  border-radius: 20px;
+  padding: 2.2rem 2rem 1.8rem 2rem;
+  box-shadow: 0 25px 60px rgba(10, 12, 35, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  animation: cardFadeIn 0.4s ease-out;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Avatar Header */
+.nl-avatar-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  background: #121638;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nl-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nl-avatar-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #252b57 0%, #0d1130 100%);
+}
+
+/* Form Body Container */
+.nl-content-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Botón de atajo para volver al inicio */
+.nl-top-back-btn {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #B58CBF;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.38rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 0.9rem;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.nl-top-back-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(-2px);
+}
+
+/* Headers */
+.nl-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  margin: 0 0 0.3rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.nl-subtitle {
+  font-size: 0.78rem;
+  color: #8C94B5;
+  margin: 0 0 1.2rem 0;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+/* Alerts */
+.nl-alert {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  margin-bottom: 0.9rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.nl-alert-error {
+  background: rgba(239, 68, 68, 0.15);
+  color: #FCA5A5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.nl-alert-success {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86EFAC;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+/* Form Layout */
+.nl-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Field Wrapper (Underline Style with Icon) */
+.nl-field-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.22);
+  padding: 0.6rem 0.2rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  box-sizing: border-box;
+}
+
+.nl-field-wrap:focus-within {
+  border-bottom-color: #B58CBF;
+}
+
+.nl-icon {
+  color: #FFFFFF;
+  opacity: 0.85;
+  margin-right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.nl-input,
+.nl-select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 0.88rem;
+  padding: 0;
+}
+
+.nl-input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.84rem;
+  font-weight: 400;
+}
+
+.nl-eye-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.nl-eye-btn:hover {
+  color: #FFFFFF;
+}
+
+/* Forgot Password Row */
+.nl-forgot-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -0.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.nl-link-btn {
+  background: transparent;
+  border: none;
+  color: #B58CBF;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+  font-family: inherit;
+}
+
+.nl-link-btn:hover {
+  color: #DABBE4;
+  text-decoration: underline;
+}
+
+/* Primary Button */
+.nl-btn-submit {
+  width: 100%;
+  padding: 0.82rem;
+  background: #A282AA;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(162, 130, 170, 0.25);
+  margin-top: 0.2rem;
+}
+
+.nl-btn-submit:hover:not(:disabled) {
+  background: #B492BD;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(162, 130, 170, 0.4);
+}
+
+.nl-btn-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.nl-btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.nl-btn-submit.nl-loading {
+  position: relative;
+  color: transparent !important;
+}
+
+.nl-btn-submit.nl-loading::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 50%;
+  margin-left: -9px;
+  margin-top: -9px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: nl-spin 0.65s linear infinite;
+}
+
+@keyframes nl-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Footer Production Note */
+.nl-footer-note-wrap {
+  margin-top: 1.4rem;
+  text-align: center;
+  padding-bottom: 0.2rem;
+}
+
+.nl-footer-note-text {
+  font-size: 0.75rem;
+  color: #7B83A6;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* Footer Register Switch */
+.nl-footer-switch {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nl-footer-text {
+  font-size: 0.76rem;
+  color: #8C94B5;
+  font-weight: 400;
+}
+
+.nl-signup-btn {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: inherit;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+}
+
+.nl-signup-btn:hover {
+  color: #DABBE4;
+}
+
+/* Responsive adjust */
+@media (max-width: 480px) {
+  .nl-container {
+    padding: 1.5rem 0.75rem;
+  }
+  .nl-card {
+    padding: 1.6rem 1.2rem 1.4rem 1.2rem;
+    border-radius: 16px;
+  }
+  .nl-avatar-wrap {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0.9rem;
+  }
+  .nl-title {
+    font-size: 1.15rem;
+    letter-spacing: 1.6px;
+  }
+  .nl-subtitle {
+    font-size: 0.73rem;
+    margin-bottom: 1rem;
+  }
+  .nl-field-wrap {
+    margin-bottom: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .nl-card {
+    padding: 1.3rem 0.9rem 1.1rem 0.9rem;
+  }
+  .nl-avatar-wrap {
+    width: 60px;
+    height: 60px;
+  }
+}

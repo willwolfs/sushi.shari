@@ -1,0 +1,252 @@
+.client-manager {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.client-manager-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f5 100%);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.client-manager-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.tabs {
+  display: flex;
+  gap: 5px;
+}
+
+.tab {
+  padding: 8px 15px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #666;
+}
+
+.tab:hover {
+  background: #f8f9fa;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #6B1D2F 0%, #8B2E3F 100%);
+  color: white;
+  border-color: #6B1D2F;
+}
+
+.client-tab-content {
+  padding: 20px;
+}
+
+.client-alert {
+  margin: 15px 15px 0 15px;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-size: 13px;
+  border-left: 4px solid;
+}
+
+.client-alert.error {
+  background-color: #fee;
+  color: #c33;
+  border-left-color: #c33;
+}
+
+.client-alert.success {
+  background-color: #e8f5e9;
+  color: #27ae60;
+  border-left-color: #27ae60;
+}
+
+.client-form-group {
+  margin-bottom: 15px;
+}
+
+.client-form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #333;
+}
+
+.client-form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.client-form-group input:focus {
+  outline: none;
+  border-color: #6B1D2F;
+  box-shadow: 0 0 0 2px rgba(107, 29, 47, 0.1);
+}
+
+.client-form-group input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.search-input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.search-input-group input {
+  flex: 1;
+}
+
+.search-btn {
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #6B1D2F 0%, #8B2E3F 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.search-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(107, 29, 47, 0.3);
+}
+
+.search-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.help-text {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  color: #999;
+}
+
+.client-details-card {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.client-details-card h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #6B1D2F;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #6B1D2F;
+  padding-bottom: 8px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-row:last-of-type:not(.detail-row ~ .btn) {
+  border-bottom: none;
+  margin-bottom: 10px;
+}
+
+.detail-row span {
+  color: #666;
+  font-weight: 500;
+}
+
+.detail-row strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #6B1D2F 0%, #8B2E3F 100%);
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn.primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(107, 29, 47, 0.3);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.register-btn {
+  margin-top: 15px;
+}
+
+.form-note {
+  margin: 10px 0 0 0;
+  font-size: 11px;
+  color: #999;
+}
+
+@media (max-width: 600px) {
+  .client-manager-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    width: 100%;
+  }
+
+  .tab {
+    flex: 1;
+  }
+}
